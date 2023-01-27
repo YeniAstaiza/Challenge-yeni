@@ -5,7 +5,7 @@ function clickEncriptar(){
 }
 
 function clickDesencriptar(){
-        document.getElementById("codigo"). value;
+    var text = document.getElementById("codigo"). value;
     document.getElementById("noEncontrado"). value = desencriptar(text);
     document.getElementById("codigo"). value = "";
 }
@@ -28,3 +28,8 @@ function desencriptar(texto){
     return texto;
 }
 
+function clickCopiar(){
+    document.getElementById("noEncontrado").select();
+    document.execCommand("copy");
+    alert("Copiado al portapapeles!");
+}
