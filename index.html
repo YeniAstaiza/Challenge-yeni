@@ -13,27 +13,41 @@
 
     <body>
         <header>
-            <div class= "logo">
+            <div class="logo">
                 <h1><img src="imagenes_Chanllenge/Vector.svg"></h1>
             </div>
         </header>
+
         <content>
-            <div>
-                form
-                <textarea name="textarea" rows="2" cols="40">Ingresa en texto aquí</textarea>
-                <p>><span class="..."></span>Solo letras minúsculas y sin acentos</p>
-                <input type="button" value="Encriptar">
-                <input type="button" value="Desencriptar">
-            </div>
-
-            <div>
-                resultado
-               <img src="imagenes_Chanllenge/Muñeco.png">
-
-                <textarea name="textarea" rows="2" cols="40">Ningun mensaje fue encontrado</textarea>
-                <label for="ingreseTexto">Ingrese el texto que desee encriptar o desencriptar</label>
+            <section class="resolver">
+                <div>
+                    <div class="ingreseTexto">
+                        <textarea id= "codigo" placeholder="Ingrese el texto aquí" name="textarea" rows="10" cols="20"></textarea>
+                    </div>
                 
+                    <div class="indicaciones">
+                        <p><span><img src="imagenes_Chanllenge/Vector.png" class="vectorSeñal"></span>Solo letras minúsculas y sin acentos</p>
+                         
+                    </div>
+
+                    <div>
+                        <input onclick="clickEncriptar()" class="btn btn-azulOscuro" type="button" value="Encriptar">
+                        <input onclick="clickDesencriptar()" class="btn btn-claro" type="button" value="Desencriptar">
+                    </div>
+                </div>
+            
+            </section>
+        
+            <section  class="respuesta">
+                <div>
+                    <img class="munheco" src="imagenes_Chanllenge/Muñeco.png">
+
+                    <textarea class="noEncontrado" id="noEncontrado" name="textarea" rows="2">Ningún mensaje fue encontrado</textarea>
+                    <p class="inserteCifrado">Ingrese el texto que desee encriptar o desencriptar</p>
+                    <input onclick="clickCopiar()" class="btn btn-copiar" type="button" value="copiar">
+                </div>
+            </section>
         </content>
     </body>
-   
+   <script src="main.js"></script>
 <html>
